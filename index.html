@@ -1,11 +1,13 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b1220">
-  <meta name="description" content="Conheça os aplicativos Android da Engsoft7: GPS Marcador de Pontos e CalcDroid.">
+  <meta name="description" content="Conheça os aplicativos Android da Engsoft7, acesse suas páginas na Google Play, documentação e políticas de privacidade.">
   <title>Engsoft7 — Aplicativos Android</title>
+
   <style>
     :root {
       color-scheme: dark;
@@ -18,8 +20,10 @@
       --border: rgba(255,255,255,.12);
       --radius: 22px;
     }
+
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
@@ -27,87 +31,281 @@
       background: radial-gradient(ellipse at 50% -15%, #203d60 0, transparent 47%), var(--bg);
       line-height: 1.6;
     }
+
     a { color: inherit; }
-    .container { width: min(1000px, calc(100% - 40px)); margin-inline: auto; }
+    a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(1000px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
     header { border-bottom: 1px solid var(--border); }
+
     nav {
-      min-height: 76px; display: flex; align-items: center;
-      justify-content: space-between; gap: 24px;
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
     }
-    .brand { text-decoration: none; font-size: 1.45rem; font-weight: 850; letter-spacing: -.6px; }
-    .brand span { color: var(--accent); }
-    .nav-links { display: flex; align-items: center; gap: 24px; }
-    .nav-links a { color: var(--muted); font-size: .95rem; text-decoration: none; }
-    .nav-links a:hover, .plain-link:hover { color: var(--accent); }
-    .hero { padding: 76px 0 42px; max-width: 760px; }
+
+    .brand {
+      text-decoration: none;
+      font-size: 1.45rem;
+      font-weight: 850;
+      letter-spacing: -.6px;
+    }
+
+    .brand span, h1 span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: .95rem;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover,
+    .plain-link:hover { color: var(--accent); }
+
+    .hero {
+      padding: 76px 0 42px;
+      max-width: 760px;
+    }
+
     .eyebrow {
-      margin-bottom: 12px; color: var(--accent); font-size: .76rem;
-      letter-spacing: 2px; font-weight: 800; text-transform: uppercase;
+      margin-bottom: 12px;
+      color: var(--accent);
+      font-size: .76rem;
+      letter-spacing: 2px;
+      font-weight: 800;
+      text-transform: uppercase;
     }
-    h1 { margin: 0; font-size: clamp(2.6rem, 7vw, 4.6rem); line-height: 1.05; letter-spacing: -2.5px; }
-    h1 span { color: var(--accent); }
-    h2 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.25rem); line-height: 1.2; letter-spacing: -.7px; }
-    h3 { margin: 0; font-size: 1.2rem; }
-    .hero-copy, .section-copy { color: var(--muted); font-size: 1.06rem; }
-    .hero-copy { max-width: 630px; margin: 20px 0 0; }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.6rem, 7vw, 4.6rem);
+      line-height: 1.05;
+      letter-spacing: -2.5px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.7rem, 4vw, 2.25rem);
+      line-height: 1.2;
+      letter-spacing: -.7px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.12rem;
+      line-height: 1.3;
+    }
+
+    .hero-copy, .section-copy {
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      margin: 20px 0 0;
+    }
+
     section { padding: 35px 0; }
+
     .section-heading { margin-bottom: 22px; }
     .section-heading .eyebrow { margin-bottom: 8px; }
-    .apps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-    .app-card {
-      min-width: 0; padding: 25px; display: flex; flex-direction: column;
-      background: linear-gradient(155deg, rgba(23,36,58,.98), rgba(18,29,48,.98));
-      border: 1px solid var(--border); border-radius: var(--radius);
+
+    .apps {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
     }
-    .app-top { display: flex; align-items: center; gap: 17px; margin-bottom: 18px; }
+
+    .app-card {
+      min-width: 0;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(155deg, rgba(23,36,58,.98), rgba(18,29,48,.98));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .app-top {
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      margin-bottom: 18px;
+    }
+
     .app-icon {
-      display: block; width: 82px; height: 82px; flex: 0 0 82px;
-      border-radius: 20px; object-fit: cover; background: #fff;
+      display: block;
+      width: 82px;
+      height: 82px;
+      flex: 0 0 82px;
+      border-radius: 20px;
+      object-fit: cover;
+      background: #fff;
       box-shadow: 0 7px 22px rgba(0,0,0,.22);
     }
-    .app-type { margin-top: 4px; color: var(--muted); font-size: .87rem; }
-    .app-description { flex: 1; margin: 0 0 23px; color: var(--muted); }
+
+    .app-type {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .87rem;
+    }
+
+    .app-description {
+      flex: 1;
+      margin: 0 0 23px;
+      color: var(--muted);
+    }
+
     .button {
-      min-height: 46px; display: inline-flex; align-items: center; justify-content: center;
-      align-self: flex-start; gap: 9px; padding: 11px 17px; border-radius: 11px;
-      background: var(--accent); color: #07151a; font-weight: 800;
-      text-decoration: none; transition: transform .18s, filter .18s;
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      gap: 9px;
+      padding: 11px 17px;
+      border-radius: 11px;
+      background: var(--accent);
+      color: #07151a;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform .18s, filter .18s;
     }
-    .button:hover { transform: translateY(-2px); filter: brightness(1.04); }
-    .all-apps { padding-top: 22px; text-align: center; }
-    .plain-link { color: var(--accent); font-weight: 750; text-decoration: none; }
-    .resource-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+
+    .button:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.04);
+    }
+
+    .all-apps {
+      padding-top: 24px;
+      text-align: center;
+    }
+
+    .plain-link {
+      color: var(--accent);
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
     .resource {
-      padding: 22px 24px; border: 1px solid var(--border); border-radius: 17px;
+      padding: 22px 24px;
+      border: 1px solid var(--border);
+      border-radius: 17px;
       background: rgba(18,29,48,.72);
+      min-width: 0;
     }
-    .resource p { color: var(--muted); margin: 7px 0 13px; }
-    .resource-links { display: flex; flex-wrap: wrap; gap: 18px; }
-    footer { margin-top: 34px; padding: 24px 0; border-top: 1px solid var(--border); color: var(--muted); font-size: .88rem; }
-    footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px 20px; }
+
+    .resource p {
+      color: var(--muted);
+      margin: 8px 0 14px;
+    }
+
+    .resource-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+    }
+
+    .resource-links a { line-height: 1.5; }
+
+    .contact-card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px 24px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      margin: 7px 0 0;
+    }
+
+    .email { overflow-wrap: anywhere; }
+
+    footer {
+      margin-top: 34px;
+      padding: 24px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+    }
+
     @media (max-width: 700px) {
       .container { width: min(100% - 30px, 520px); }
-      nav { min-height: auto; padding: 19px 0; align-items: flex-start; flex-direction: column; gap: 12px; }
-      .nav-links { gap: 19px; }
+
+      nav {
+        min-height: auto;
+        padding: 19px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links { gap: 12px 19px; }
       .hero { padding-top: 55px; }
       h1 { letter-spacing: -1.5px; }
+
       .apps, .resource-grid { grid-template-columns: 1fr; }
       .app-card { padding: 21px; }
+
+      .app-icon {
+        width: 72px;
+        height: 72px;
+        flex-basis: 72px;
+        border-radius: 17px;
+      }
     }
+
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition: none !important; }
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="container">
       <nav aria-label="Navegação principal">
-        <a class="brand" href="#inicio">Engsoft<span>7</span></a>
+        <a class="brand" href="#inicio" aria-label="Engsoft7 — início">
+          Engsoft<span>7</span>
+        </a>
+
         <div class="nav-links">
           <a href="#aplicativos">Aplicativos</a>
-          <a href="#recursos">Ajuda e documentos</a>
+          <a href="#recursos">Documentação e privacidade</a>
           <a href="#contato">Contato</a>
         </div>
       </nav>
@@ -116,9 +314,19 @@
 
   <main class="container" id="inicio">
     <section class="hero">
-      <div class="eyebrow">Aplicativos Android</div>
-      <h1>Ferramentas úteis.<br><span>Sem complicação.</span></h1>
-      <p class="hero-copy">Conheça os aplicativos da Engsoft7: soluções práticas para localização, medições e cálculos do dia a dia.</p>
+      <div class="eyebrow">Desenvolvimento de aplicativos</div>
+
+      <h1>
+        Aplicativos úteis.<br>
+        <span>Feitos para o dia a dia.</span>
+      </h1>
+
+      <p class="hero-copy">
+        Conheça os aplicativos da Engsoft7. Esta página reúne nossos
+        projetos, links oficiais de instalação, documentação e informações
+        de contato. Novos aplicativos poderão ser adicionados aqui conforme
+        forem publicados.
+      </p>
     </section>
 
     <section id="aplicativos">
@@ -134,14 +342,30 @@
               class="app-icon"
               src="https://play-lh.googleusercontent.com/qO1USVo0wTGJQ9RInTWMHsgYUUS9ppMi2erogGcOTWiSc8UPbzhldvx9RghufN8lXbH8OuHUQ0dHl8IopVLsnQ%3Dw240-h480"
               alt="Ícone oficial do GPS Marcador de Pontos"
-              width="82" height="82" loading="eager" decoding="async">
+              width="82"
+              height="82"
+              loading="eager"
+              decoding="async">
+
             <div>
               <h3>GPS Marcador de Pontos</h3>
               <div class="app-type">Mapas e navegação</div>
             </div>
           </div>
-          <p class="app-description">Salve pontos com GPS, meça áreas e consulte ou exporte coordenadas para suas atividades de campo.</p>
-          <a class="button" href="https://play.google.com/store/apps/details?id=com.engsoft7.gpspontos&amp;hl=pt" target="_blank" rel="noopener noreferrer">Ver na Google Play <span aria-hidden="true">↗</span></a>
+
+          <p class="app-description">
+            Registre e consulte pontos de interesse com localização GPS.
+            Acesse a página oficial para conferir os detalhes e instalar
+            o aplicativo.
+          </p>
+
+          <a
+            class="button"
+            href="https://play.google.com/store/apps/details?id=com.engsoft7.gpspontos&amp;hl=pt"
+            target="_blank"
+            rel="noopener noreferrer">
+            Ver na Google Play <span aria-hidden="true">↗</span>
+          </a>
         </article>
 
         <article class="app-card">
@@ -150,56 +374,144 @@
               class="app-icon"
               src="https://play-lh.googleusercontent.com/R3giEwBGJwn6SCLZuz7hid-ITQptEuclQsyiRsUE_aM85MrOuTGQ2TAZsU7rZ-Pwe6s4y9o_jEVk71FsBzngaA%3Dw240-h480"
               alt="Ícone oficial do CalcDroid"
-              width="82" height="82" loading="lazy" decoding="async">
+              width="82"
+              height="82"
+              loading="lazy"
+              decoding="async">
+
             <div>
               <h3>CalcDroid</h3>
               <div class="app-type">Ferramentas e cálculos</div>
             </div>
           </div>
-          <p class="app-description">Uma calculadora Android simples e direta para contas e operações do cotidiano.</p>
-          <a class="button" href="https://play.google.com/store/apps/details?id=io.github.engsoft7.calcdroid" target="_blank" rel="noopener noreferrer">Ver na Google Play <span aria-hidden="true">↗</span></a>
+
+          <p class="app-description">
+            Uma calculadora Android para realizar cálculos e operações
+            do cotidiano. Consulte a página oficial para mais informações.
+          </p>
+
+          <a
+            class="button"
+            href="https://play.google.com/store/apps/details?id=io.github.engsoft7.calcdroid"
+            target="_blank"
+            rel="noopener noreferrer">
+            Ver na Google Play <span aria-hidden="true">↗</span>
+          </a>
         </article>
       </div>
 
       <div class="all-apps">
-        <a class="plain-link" href="https://play.google.com/store/apps/developer?id=Engsoft7&amp;hl=pt" target="_blank" rel="noopener noreferrer">Ver todos os aplicativos da Engsoft7 na Google Play ↗</a>
+        <a
+          class="plain-link"
+          href="https://play.google.com/store/apps/developer?id=Engsoft7&amp;hl=pt"
+          target="_blank"
+          rel="noopener noreferrer">
+          Ver todos os aplicativos da Engsoft7 na Google Play ↗
+        </a>
       </div>
     </section>
 
     <section id="recursos">
       <div class="section-heading">
-        <h2>Ajuda e documentos</h2>
+        <div class="eyebrow">Manuais e transparência</div>
+        <h2>Documentação e privacidade</h2>
       </div>
+
       <div class="resource-grid">
         <article class="resource">
-          <h3>Manual do aplicativo</h3>
-          <p>Como marcar pontos, consultar coordenadas e usar o GPS.</p>
-          <a class="plain-link" href="https://engsoft7.github.io/GPS-marcador-de-pontos/" target="_blank" rel="noopener noreferrer">Abrir manual ↗</a>
-        </article>
-        <article class="resource">
-          <h3>Política de privacidade</h3>
-          <p>Escolha o idioma para consultar a política do GPS Marcador de Pontos.</p>
+          <h3>GPS Marcador de Pontos</h3>
+
+          <p>
+            Acesse o manual de uso e a política de privacidade
+            deste aplicativo.
+          </p>
+
           <div class="resource-links">
-            <a class="plain-link" href="https://engsoft7.github.io/GPS-marcador-de-pontos/privacidade.html" target="_blank" rel="noopener noreferrer">Português ↗</a>
-            <a class="plain-link" href="https://engsoft7.github.io/GPS-marcador-de-pontos/privacy.html" target="_blank" rel="noopener noreferrer">English ↗</a>
+            <a
+              class="plain-link"
+              href="https://engsoft7.github.io/GPS-marcador-de-pontos/"
+              target="_blank"
+              rel="noopener noreferrer">
+              Manual do GPS ↗
+            </a>
+
+            <a
+              class="plain-link"
+              href="https://engsoft7.github.io/GPS-marcador-de-pontos/privacidade.html"
+              target="_blank"
+              rel="noopener noreferrer">
+              Privacidade — Português ↗
+            </a>
+
+            <a
+              class="plain-link"
+              href="https://engsoft7.github.io/GPS-marcador-de-pontos/privacy.html"
+              target="_blank"
+              rel="noopener noreferrer">
+              Privacy Policy — English ↗
+            </a>
           </div>
         </article>
+
         <article class="resource">
-          <h3>Publicidade (app-ads.txt)</h3>
-          <p>Declaração de vendedores autorizados para anúncios.</p>
-          <a class="plain-link" href="https://engsoft7.github.io/app-ads.txt" target="_blank" rel="noopener noreferrer">Abrir arquivo ↗</a>
+          <h3>CalcDroid</h3>
+
+          <p>
+            Leia a política de privacidade específica do CalcDroid.
+          </p>
+
+          <div class="resource-links">
+            <a
+              class="plain-link"
+              href="https://engsoft7.github.io/CalcDroid/privacy-policy.html"
+              target="_blank"
+              rel="noopener noreferrer">
+              Política de privacidade — CalcDroid ↗
+            </a>
+          </div>
+        </article>
+
+        <article class="resource">
+          <h3>Arquivo de publicidade</h3>
+
+          <p>
+            Consulte a declaração de vendedores autorizados para
+            publicidade do domínio Engsoft7.
+          </p>
+
+          <div class="resource-links">
+            <a
+              class="plain-link"
+              href="https://engsoft7.github.io/app-ads.txt"
+              target="_blank"
+              rel="noopener noreferrer">
+              Abrir app-ads.txt ↗
+            </a>
+          </div>
         </article>
       </div>
     </section>
 
     <section id="contato">
       <div class="section-heading">
-        <div class="eyebrow">Fale com a gente</div>
+        <div class="eyebrow">Dúvidas e parcerias</div>
         <h2>Contato</h2>
       </div>
-      <article class="resource">
-        <p>Dúvidas, sugestões ou propostas de parceria? Entre em contato por e-mail.</p>
-        <a class="plain-link" href="mailto:maycon.engineer@gmail.com">maycon.engineer@gmail.com ↗</a>
+
+      <article class="resource contact-card">
+        <div>
+          <h3>Fale com a Engsoft7</h3>
+          <p>
+            Para dúvidas, sugestões ou propostas relacionadas
+            aos aplicativos, envie um e-mail.
+          </p>
+        </div>
+
+        <a
+          class="plain-link email"
+          href="mailto:maycon.engineer@gmail.com">
+          maycon.engineer@gmail.com ↗
+        </a>
       </article>
     </section>
   </main>
