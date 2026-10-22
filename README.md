@@ -22,6 +22,7 @@ Este repositório publica o site principal da Engsoft7 pelo GitHub Pages.
 - `index.html` — página inicial do site.
 - `app-ads.txt` — declaração de vendedores autorizados para publicidade.
 - `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `icon-*.png` — ícones do site (aba, favoritos e tela inicial).
+- `apps/` — ícones dos aplicativos exibidos na página (copiados dos projetos de cada app).
 - `site.webmanifest` — nome e ícones usados ao adicionar o site à tela inicial.
 - `README.md` — informações sobre o site e o aplicativo.
 
