@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#0b1220">
   <meta name="description" content="Conheça os aplicativos Android da Engsoft7, acesse suas páginas na Google Play, documentação e políticas de privacidade.">
   <title>Engsoft7 — Aplicativos Android</title>
+  <link rel="canonical" href="https://engsoft7.github.io/">
 
   <meta name="application-name" content="Engsoft7">
   <meta name="apple-mobile-web-app-title" content="Engsoft7">
@@ -525,7 +526,7 @@
         <a
           class="plain-link email"
           href="mailto:maycon.engineer@gmail.com">
-          maycon.engineer@gmail.com ↗
+          maycon.engineer@gmail.com
         </a>
       </article>
     </section>
@@ -533,9 +534,13 @@
 
   <footer>
     <div class="container">
-      <span>© 2026 Engsoft7</span>
+      <span>© <span id="ano">2026</span> Engsoft7</span>
       <span>Aplicativos e soluções digitais</span>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("ano").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
